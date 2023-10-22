@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://bq1077ayli0ho"]
+
+[ext_resource type="ArrayMesh" uid="uid://dt8qt2oqq4quv" path="res://assets/models/props/Wall_Decorated.obj" id="1_dtog2"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_08bt0"]
+size = Vector3(3.91217, 3.96238, 0.505531)
+
+[node name="wall" type="Node3D"]
+
+[node name="WallDecorated" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 2.08165e-12, 2.08165e-12)
+mesh = ExtResource("1_dtog2")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="WallDecorated"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.08165e-12, -2.08165e-12, -2.08165e-12)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="WallDecorated/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00342023, 2.013, -0.00638294)
+shape = SubResource("BoxShape3D_08bt0")

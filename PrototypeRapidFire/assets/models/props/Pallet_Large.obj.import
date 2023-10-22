@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cipd23e56qwnw"
+path="res://.godot/imported/Pallet_Large.obj-7f0b5c5d4ba3cc37f1fdf9ac4f74e863.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Pallet_Large.obj-7f0b5c5d4ba3cc37f1fdf9ac4f74e863.mesh"]
+
+source_file="res://assets/models/props/Pallet_Large.obj"
+dest_files=["res://.godot/imported/Pallet_Large.obj-7f0b5c5d4ba3cc37f1fdf9ac4f74e863.mesh", "res://.godot/imported/Pallet_Large.obj-7f0b5c5d4ba3cc37f1fdf9ac4f74e863.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

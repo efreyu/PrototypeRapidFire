@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dhd5px2n1vpkw"
+path="res://.godot/imported/table_medium_long.obj-3ceda69f904602773e5026a2a8ba154b.mesh"
+
+[deps]
+
+files=["res://.godot/imported/table_medium_long.obj-3ceda69f904602773e5026a2a8ba154b.mesh"]
+
+source_file="res://assets/models/props/table_medium_long.obj"
+dest_files=["res://.godot/imported/table_medium_long.obj-3ceda69f904602773e5026a2a8ba154b.mesh", "res://.godot/imported/table_medium_long.obj-3ceda69f904602773e5026a2a8ba154b.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

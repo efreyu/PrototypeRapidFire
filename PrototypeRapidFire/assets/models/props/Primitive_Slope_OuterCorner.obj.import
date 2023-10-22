@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dpoy0mb15b6qn"
+path="res://.godot/imported/Primitive_Slope_OuterCorner.obj-03d83800f88771810f3c29d4e6c1aca8.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Primitive_Slope_OuterCorner.obj-03d83800f88771810f3c29d4e6c1aca8.mesh"]
+
+source_file="res://assets/models/props/Primitive_Slope_OuterCorner.obj"
+dest_files=["res://.godot/imported/Primitive_Slope_OuterCorner.obj-03d83800f88771810f3c29d4e6c1aca8.mesh", "res://.godot/imported/Primitive_Slope_OuterCorner.obj-03d83800f88771810f3c29d4e6c1aca8.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://eceyq2t0y0dq"
+path="res://.godot/imported/Primitive_Slope_InnerCorner.obj-3812689a4cd7873b3a1ea9cecf9a6295.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Primitive_Slope_InnerCorner.obj-3812689a4cd7873b3a1ea9cecf9a6295.mesh"]
+
+source_file="res://assets/models/props/Primitive_Slope_InnerCorner.obj"
+dest_files=["res://.godot/imported/Primitive_Slope_InnerCorner.obj-3812689a4cd7873b3a1ea9cecf9a6295.mesh", "res://.godot/imported/Primitive_Slope_InnerCorner.obj-3812689a4cd7873b3a1ea9cecf9a6295.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

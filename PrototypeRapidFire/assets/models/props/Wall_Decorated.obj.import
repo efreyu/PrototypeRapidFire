@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dt8qt2oqq4quv"
+path="res://.godot/imported/Wall_Decorated.obj-985b650d68e1a2ac796ead3b21a63e54.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Wall_Decorated.obj-985b650d68e1a2ac796ead3b21a63e54.mesh"]
+
+source_file="res://assets/models/props/Wall_Decorated.obj"
+dest_files=["res://.godot/imported/Wall_Decorated.obj-985b650d68e1a2ac796ead3b21a63e54.mesh", "res://.godot/imported/Wall_Decorated.obj-985b650d68e1a2ac796ead3b21a63e54.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

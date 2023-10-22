@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://b3h76jqa4yru1"
+path="res://.godot/imported/Primitive_Cube.obj-5f9140915d439581cd74b23383f4632b.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Primitive_Cube.obj-5f9140915d439581cd74b23383f4632b.mesh"]
+
+source_file="res://assets/models/props/Primitive_Cube.obj"
+dest_files=["res://.godot/imported/Primitive_Cube.obj-5f9140915d439581cd74b23383f4632b.mesh", "res://.godot/imported/Primitive_Cube.obj-5f9140915d439581cd74b23383f4632b.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://brw0e8u48ppdx"
+path="res://.godot/imported/Dummy_Base_Dummy_Body_Dummy_ArmRight.obj-adbc969dfde8353a1b87f8ad149a037a.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Dummy_Base_Dummy_Body_Dummy_ArmRight.obj-adbc969dfde8353a1b87f8ad149a037a.mesh"]
+
+source_file="res://assets/models/props/Dummy_Base_Dummy_Body_Dummy_ArmRight.obj"
+dest_files=["res://.godot/imported/Dummy_Base_Dummy_Body_Dummy_ArmRight.obj-adbc969dfde8353a1b87f8ad149a037a.mesh", "res://.godot/imported/Dummy_Base_Dummy_Body_Dummy_ArmRight.obj-adbc969dfde8353a1b87f8ad149a037a.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

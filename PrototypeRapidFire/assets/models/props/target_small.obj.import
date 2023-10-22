@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://vl3fvk3muanu"
+path="res://.godot/imported/target_small.obj-16aa8c1aa5fc143a3884ed35b3d31e8d.mesh"
+
+[deps]
+
+files=["res://.godot/imported/target_small.obj-16aa8c1aa5fc143a3884ed35b3d31e8d.mesh"]
+
+source_file="res://assets/models/props/target_small.obj"
+dest_files=["res://.godot/imported/target_small.obj-16aa8c1aa5fc143a3884ed35b3d31e8d.mesh", "res://.godot/imported/target_small.obj-16aa8c1aa5fc143a3884ed35b3d31e8d.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
