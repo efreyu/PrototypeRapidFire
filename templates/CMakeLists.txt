@@ -27,6 +27,7 @@ endif()
 # Generate our project's .gdextension file from the template
 set( GD_EXTENSION_FILE ${PROJECT_NAME}.gdextension )
 configure_file( ${GD_EXTENSION_FILE_INPUT} ${PROJECT_SOURCE_DIR}/${PROJECT_NAME}/${GD_EXTENSION_FILE} )
+#configure_file( "${CMAKE_SOURCE_DIR}/src/icons.in" ${PROJECT_SOURCE_DIR}/${PROJECT_NAME}/${GD_EXTENSION_FILE} )
 
 # Install the gdextension file from the build directory
 install(

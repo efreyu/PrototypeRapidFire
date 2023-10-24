@@ -1,3 +1,7 @@
 [gd_scene format=3 uid="uid://tnhy75ovf22d"]
 
 [node name="Node3D" type="Node3D"]
+
+[node name="Example" type="Example" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
