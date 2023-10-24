@@ -59,6 +59,7 @@ void ExampleMin::_bind_methods()
 Example::Example()
 {
     godot::UtilityFunctions::print( "Constructor." );
+//    add_theme_icon_override("res://assets/editor/icons/state.svg")
 }
 
 Example::~Example()
