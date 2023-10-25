@@ -1,18 +1,12 @@
 #ifndef SWIPERPG_GAMEPLAYMODULE_H
 #define SWIPERPG_GAMEPLAYMODULE_H
 
-#include "../moduleInterface.h"
+#include "godot_cpp/godot.hpp"
 
 namespace swipeRpg::gameplayModule {
 
-	class gameplayModule : public moduleInterface {
-	public:
-		gameplayModule() = default;
-		~gameplayModule() override = default;
+    void initModule(godot::ModuleInitializationLevel p_level);
+    void cleanupModule(godot::ModuleInitializationLevel p_level);
+}// namespace swipeRpg::gameplayModule
 
-		void registerAll() override;
-		void initModule() override;
-	};
-}
-
-#endif //SWIPERPG_GAMEPLAYMODULE_H
+#endif// SWIPERPG_GAMEPLAYMODULE_H
