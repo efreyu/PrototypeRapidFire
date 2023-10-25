@@ -1,3 +1,14 @@
+[configuration]
+
+entry_symbol = "GDExtensionInit"
+compatibility_minimum = 4.1
+
+[libraries]
+
+linux.debug.x86_64 = "lib/Linux-x86_64/libPrototypeRapidFire-d.so"
+macos.debug = "lib/Darwin-Universal/libPrototypeRapidFire-d.dylib"
+windows.debug.x86_64 = "lib/Windows-AMD64/PrototypeRapidFire-d.dll"
+
 [icons]
 
-Example = "res://editor/icons/state.svg"
+Example = "res://editor/icons/square-full-regular.svg"

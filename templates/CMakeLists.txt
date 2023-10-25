@@ -27,7 +27,11 @@ endif()
 # Generate our project's .gdextension file from the template
 set( GD_EXTENSION_FILE ${PROJECT_NAME}.gdextension )
 configure_file( ${GD_EXTENSION_FILE_INPUT} ${PROJECT_SOURCE_DIR}/${PROJECT_NAME}/${GD_EXTENSION_FILE} )
-#configure_file( "${CMAKE_SOURCE_DIR}/src/icons.in" ${PROJECT_SOURCE_DIR}/${PROJECT_NAME}/${GD_EXTENSION_FILE} )
+
+# Add the icons for custom classes to the gdextension file
+set(ICONS_FILE "${CMAKE_SOURCE_DIR}/src/icons.in")
+file(READ ${ICONS_FILE} ICONS_CONTENT)
+file(APPEND ${PROJECT_SOURCE_DIR}/${PROJECT_NAME}/${GD_EXTENSION_FILE} ${ICONS_CONTENT})
 
 # Install the gdextension file from the build directory
 install(
@@ -40,3 +44,5 @@ unset( BUILD_TYPE )
 unset( GD_EXTENSION_FILE )
 unset( GD_EXTENSION_FILE_INPUT )
 unset( LIB_PREFIX )
+unset( ICONS_FILE )
+unset( ICONS_CONTENT )
