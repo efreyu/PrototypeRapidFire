@@ -1,3 +1,7 @@
 [gd_scene format=3 uid="uid://tnhy75ovf22d"]
 
 [node name="Node3D" type="Node3D"]
+
+[node name="playerStateMachine" type="playerStateMachine" parent="."]
+
+[node name="playerState" type="playerState" parent="playerStateMachine"]

@@ -2,3 +2,5 @@
 [icons]
 
 Example = "res://editor/icons/square-full-regular.svg"
+playerStateMachine = "res://editor/icons/state_machine.svg"
+playerState = "res://editor/icons/state.svg"

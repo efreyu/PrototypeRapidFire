@@ -14,6 +14,8 @@ void swipeRpg::gameplayModule::initModule(godot::ModuleInitializationLevel p_lev
 
     //    godot::ClassDB::register_class<ExampleVirtual>( true );
     //    godot::ClassDB::register_abstract_class<ExampleAbstract>();
+    godot::ClassDB::register_class<playerStateMachine>();
+    godot::ClassDB::register_class<playerState>();
 }
 
 void swipeRpg::gameplayModule::cleanupModule(godot::ModuleInitializationLevel p_level) {
