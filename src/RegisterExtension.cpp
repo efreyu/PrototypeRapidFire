@@ -20,7 +20,7 @@ namespace {
     ///
     /// @see GDExtensionInit
     void initializeExtension(godot::ModuleInitializationLevel p_level) {
-        swipeRpg::gameplayModule::initModule(p_level);
+        rapidFire::gameplayModule::initModule(p_level);
 
         if (p_level != godot::MODULE_INITIALIZATION_LEVEL_SCENE) {
             return;
@@ -40,7 +40,7 @@ namespace {
     ///
     /// @see GDExtensionInit
     void uninitializeExtension(godot::ModuleInitializationLevel p_level) {
-        swipeRpg::gameplayModule::initModule(p_level);
+        rapidFire::gameplayModule::initModule(p_level);
     }
 }// namespace
 

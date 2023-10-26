@@ -1,11 +1,11 @@
 #pragma once
-#ifndef PROTOTYPERAPIDFIRE_PLAYERSTATE_H
-#define PROTOTYPERAPIDFIRE_PLAYERSTATE_H
+#ifndef RAPIDFIRE_PLAYERSTATE_H
+#define RAPIDFIRE_PLAYERSTATE_H
 
 #include "godot_cpp/classes/node.hpp"
 #include "godot_cpp/godot.hpp"
 
-namespace swipeRpg::gameplayModule {
+namespace rapidFire::gameplayModule {
     class playerState : public godot::Node {
         GDCLASS(playerState, godot::Node)
     private:
@@ -14,6 +14,6 @@ namespace swipeRpg::gameplayModule {
     public:
         //
     };
-}// namespace swipeRpg::gameplayModule
+}// namespace rapidFire::gameplayModule
 
-#endif// PROTOTYPERAPIDFIRE_PLAYERSTATE_H
+#endif// RAPIDFIRE_PLAYERSTATE_H

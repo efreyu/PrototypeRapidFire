@@ -1,12 +1,12 @@
-#ifndef SWIPERPG_GAMEPLAYMODULE_H
-#define SWIPERPG_GAMEPLAYMODULE_H
+#ifndef RAPIDFIRE_GAMEPLAYMODULE_H
+#define RAPIDFIRE_GAMEPLAYMODULE_H
 
 #include "godot_cpp/godot.hpp"
 
-namespace swipeRpg::gameplayModule {
+namespace rapidFire::gameplayModule {
 
     void initModule(godot::ModuleInitializationLevel p_level);
     void cleanupModule(godot::ModuleInitializationLevel p_level);
-}// namespace swipeRpg::gameplayModule
+}// namespace rapidFire::gameplayModule
 
-#endif// SWIPERPG_GAMEPLAYMODULE_H
+#endif// RAPIDFIRE_GAMEPLAYMODULE_H

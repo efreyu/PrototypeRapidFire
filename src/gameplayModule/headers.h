@@ -1,8 +1,8 @@
-#ifndef SWIPERPG_HEADERS_H
-#define SWIPERPG_HEADERS_H
+#ifndef RAPIDFIRE_HEADERS_H
+#define RAPIDFIRE_HEADERS_H
 
 
 #include "player/playerStateMachine.h"
 #include "player/playerState.h"
 
-#endif //SWIPERPG_HEADERS_H
+#endif //RAPIDFIRE_HEADERS_H

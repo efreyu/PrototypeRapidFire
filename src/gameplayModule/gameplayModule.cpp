@@ -6,7 +6,7 @@
 
 #include "headers.h"
 
-void swipeRpg::gameplayModule::initModule(godot::ModuleInitializationLevel p_level) {
+void rapidFire::gameplayModule::initModule(godot::ModuleInitializationLevel p_level) {
     // Initialize all classes here
     if (p_level != godot::MODULE_INITIALIZATION_LEVEL_SCENE) {
         return;
@@ -18,7 +18,7 @@ void swipeRpg::gameplayModule::initModule(godot::ModuleInitializationLevel p_lev
     godot::ClassDB::register_class<playerState>();
 }
 
-void swipeRpg::gameplayModule::cleanupModule(godot::ModuleInitializationLevel p_level) {
+void rapidFire::gameplayModule::cleanupModule(godot::ModuleInitializationLevel p_level) {
     // Cleanup and uninitializing all classes here
     if (p_level != godot::MODULE_INITIALIZATION_LEVEL_SCENE) {
         return;

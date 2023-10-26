@@ -1,7 +1,7 @@
 # SPDX-License-Identifier: Unlicense
 
 cmake_minimum_required( VERSION 3.22 )
-set(PROJECT_NAME PrototypeRapidFire)
+set(PROJECT_NAME RapidFire)
 message( STATUS "Using CMake ${CMAKE_VERSION}" )
 
 # Require out-of-source builds
