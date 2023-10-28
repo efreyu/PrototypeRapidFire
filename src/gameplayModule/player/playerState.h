@@ -2,10 +2,10 @@
 #ifndef RAPIDFIRE_PLAYERSTATE_H
 #define RAPIDFIRE_PLAYERSTATE_H
 
+#include "godot_cpp/godot.hpp"
 #include "godot_cpp/classes/input_event.hpp"
 #include "godot_cpp/classes/node.hpp"
 #include "godot_cpp/classes/ref.hpp"
-#include "godot_cpp/godot.hpp"
 
 namespace rapidFire::gameplayModule {
 
@@ -20,13 +20,13 @@ namespace rapidFire::gameplayModule {
     public:
         playerState();
         ~playerState();
-        void unhandled_input(const godot::Ref<godot::InputEvent>& event);
-        void process(double delta);
-        void physics_process(double delta);
-        void enter(const godot::Dictionary& msg);
-        void exit();
+        void unhandled_input_state(const godot::Ref<godot::InputEvent>& event);
+        void process_state(double delta);
+        void physics_process_state(double delta);
+        void enter_state(const godot::Dictionary& msg);
+        void exit_state();
 
-        // ovwerride section
+        // override section
         void _ready() override;
 
     private:

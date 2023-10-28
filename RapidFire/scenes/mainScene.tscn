@@ -2,7 +2,8 @@
 
 [node name="Node3D" type="Node3D"]
 
-[node name="playerStateMachine" type="playerStateMachine" parent="."]
+[node name="playerStateMachine" type="playerStateMachine" parent="." node_paths=PackedStringArray("initialState")]
+initialState = NodePath("move")
 
 [node name="move" type="playerState" parent="playerStateMachine" node_paths=PackedStringArray("stateMachine")]
 stateMachine = NodePath("..")
