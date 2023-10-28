@@ -20,11 +20,7 @@ void playerState::_bind_methods() {
     ADD_PROPERTY(godot::PropertyInfo(godot::Variant::OBJECT, "stateMachine", godot::PROPERTY_HINT_NODE_TYPE, "playerStateMachine"), "set_state_machine", "get_state_machine");
 }
 
-playerState::playerState() {
-    if (!godot::Engine::get_singleton()->is_editor_hint()) {
-        assert(_stateMachine && "playerState::_stateMachine - should not be null! Setup the state machine node in the editor!");
-    }
-}
+playerState::playerState() {}
 
 playerState::~playerState() {}
 
@@ -53,5 +49,8 @@ void playerState::_ready() {
     if (_parentState) {
         godot::UtilityFunctions::print(
           "[node:", get_name(), "]playerState::_ready() - parent state: [node:", _parentState->get_name(), "]");
+    }
+    if (!godot::Engine::get_singleton()->is_editor_hint()) {
+        assert(_stateMachine && "playerState::_stateMachine - should not be null! Setup the state machine node in the editor!");
     }
 }

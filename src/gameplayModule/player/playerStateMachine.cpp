@@ -1,6 +1,7 @@
 #include "playerStateMachine.h"
 #include "godot_cpp/core/class_db.hpp"
 #include "playerState.h"
+#include "godot_cpp/variant/utility_functions.hpp"
 
 using namespace rapidFire::gameplayModule;
 
@@ -12,15 +13,27 @@ void playerStateMachine::_bind_methods() {
 }
 
 void playerStateMachine::_unhandled_input(const godot::Ref<godot::InputEvent>& event) {
-    //
+    if (_currentState) {
+        _currentState->unhandled_input_state(event);
+    } else {
+        godot::UtilityFunctions::print("[node:", get_name(), "]playerStateMachine::_unhandled_input() - current state is null!");
+    }
 }
 
 void playerStateMachine::_process(double delta) {
-    //
+    if (_currentState) {
+        _currentState->process_state(delta);
+    } else {
+        godot::UtilityFunctions::print("[node:", get_name(), "]playerStateMachine::_process() - current state is null!");
+    }
 }
 
 void playerStateMachine::_physics_process(double delta) {
-    //
+    if (_currentState) {
+        _currentState->physics_process_state(delta);
+    } else {
+        godot::UtilityFunctions::print("[node:", get_name(), "]playerStateMachine::_physics_process() - current state is null!");
+    }
 }
 
 void playerStateMachine::set_current_state(playerState* state) {
