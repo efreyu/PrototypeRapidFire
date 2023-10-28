@@ -8,12 +8,18 @@
 #include "godot_cpp/godot.hpp"
 
 namespace rapidFire::gameplayModule {
+
+    // forward declaration
+    class playerStateMachine;
+
     class playerState : public godot::Node {
         GDCLASS(playerState, godot::Node)
     private:
         static void _bind_methods();
 
     public:
+        playerState();
+        ~playerState();
         void unhandled_input(const godot::Ref<godot::InputEvent>& event);
         void process(double delta);
         void physics_process(double delta);
@@ -23,6 +29,15 @@ namespace rapidFire::gameplayModule {
         // ovwerride section
         void _ready() override;
 
+    private:
+        _FORCE_INLINE_ void set_state_machine(playerStateMachine* stateMachine) {
+            _stateMachine = stateMachine;
+        }
+        _FORCE_INLINE_ playerStateMachine* get_state_machine() const {
+            return _stateMachine;
+        }
+
+        playerStateMachine* _stateMachine = nullptr;
         playerState* _parentState = nullptr;
     };
 }// namespace rapidFire::gameplayModule

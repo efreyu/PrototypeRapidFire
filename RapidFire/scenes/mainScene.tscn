@@ -4,6 +4,8 @@
 
 [node name="playerStateMachine" type="playerStateMachine" parent="."]
 
-[node name="move" type="playerState" parent="playerStateMachine"]
+[node name="move" type="playerState" parent="playerStateMachine" node_paths=PackedStringArray("stateMachine")]
+stateMachine = NodePath("..")
 
-[node name="run" type="playerState" parent="playerStateMachine/move"]
+[node name="run" type="playerState" parent="playerStateMachine/move" node_paths=PackedStringArray("stateMachine")]
+stateMachine = NodePath("../..")
