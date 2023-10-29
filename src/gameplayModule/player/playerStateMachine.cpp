@@ -6,7 +6,6 @@
 using namespace rapidFire::gameplayModule;
 
 void playerStateMachine::_bind_methods() {
-    //    godot::ClassDB::bind_method(godot::D_METHOD("_unhandled_input"), &playerStateMachine::_unhandled_input);
     godot::ClassDB::bind_method(godot::D_METHOD("set_state", "state"), &playerStateMachine::set_current_state);
     godot::ClassDB::bind_method(godot::D_METHOD("get_state"), &playerStateMachine::get_current_state);
     ADD_PROPERTY(
