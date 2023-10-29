@@ -23,7 +23,7 @@ namespace rapidFire::gameplayModule {
         void unhandled_input_state(const godot::Ref<godot::InputEvent>& event);
         void process_state(double delta);
         void physics_process_state(double delta);
-        void enter_state(const godot::Dictionary& msg);
+        void enter_state(const godot::Dictionary& msg = godot::Dictionary());
         void exit_state();
 
         // override section

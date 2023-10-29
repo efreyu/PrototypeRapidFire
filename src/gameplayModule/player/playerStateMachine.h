@@ -19,11 +19,17 @@ namespace rapidFire::gameplayModule {
 
     public:
         // override section
+        void _ready() override;
         void _unhandled_input(const godot::Ref<godot::InputEvent>& event) override;
         void _process(double delta) override;
         void _physics_process(double delta) override;
+
+        // methods for properties
         _FORCE_INLINE_ void set_current_state(playerState* state);
         _FORCE_INLINE_ playerState* get_current_state() const;
+
+        // state transitions
+        void transition_to(const godot::NodePath& targetStatePath, const godot::Dictionary& msg = godot::Dictionary());
 
     private:
         playerState* _currentState = nullptr;

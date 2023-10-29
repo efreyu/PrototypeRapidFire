@@ -1,15 +1,23 @@
 #include "playerStateMachine.h"
 #include "godot_cpp/core/class_db.hpp"
-#include "playerState.h"
 #include "godot_cpp/variant/utility_functions.hpp"
+#include "playerState.h"
 
 using namespace rapidFire::gameplayModule;
 
 void playerStateMachine::_bind_methods() {
-//    godot::ClassDB::bind_method(godot::D_METHOD("_unhandled_input"), &playerStateMachine::_unhandled_input);
+    //    godot::ClassDB::bind_method(godot::D_METHOD("_unhandled_input"), &playerStateMachine::_unhandled_input);
     godot::ClassDB::bind_method(godot::D_METHOD("set_state", "state"), &playerStateMachine::set_current_state);
     godot::ClassDB::bind_method(godot::D_METHOD("get_state"), &playerStateMachine::get_current_state);
-    ADD_PROPERTY(godot::PropertyInfo(godot::Variant::OBJECT, "initialState", godot::PROPERTY_HINT_NODE_TYPE, "playerState"), "set_state", "get_state");
+    ADD_PROPERTY(
+      godot::PropertyInfo(godot::Variant::OBJECT, "initialState", godot::PROPERTY_HINT_NODE_TYPE, "playerState"), "set_state", "get_state");
+}
+
+void playerStateMachine::_ready() {
+    if (_currentState)
+        _currentState->enter_state();
+    else
+        godot::UtilityFunctions::print("[node:", get_name(), "]playerStateMachine::_ready() - current state is null!");
 }
 
 void playerStateMachine::_unhandled_input(const godot::Ref<godot::InputEvent>& event) {
@@ -43,4 +51,25 @@ void playerStateMachine::set_current_state(playerState* state) {
 
 playerState* playerStateMachine::get_current_state() const {
     return _currentState;
+}
+
+void playerStateMachine::transition_to(const godot::NodePath& targetStatePath, const godot::Dictionary& msg) {
+    if (!has_node(targetStatePath)) {
+        godot::UtilityFunctions::print(
+          "[node:", get_name(), "]playerStateMachine::transition_to() - target state [node:", targetStatePath, "] does not exist!");
+        return;
+    }
+
+    if (_currentState) {
+        _currentState->exit_state();
+    }
+
+    if (auto targetState = get_node<playerState>(targetStatePath)) {
+        _currentState = targetState;
+        _currentState->enter_state(msg);
+        emit_signal("onTransitionEnded", targetStatePath);
+    } else {
+        godot::UtilityFunctions::print(
+          "[node:", get_name(), "]playerStateMachine::transition_to() - target state [node:", targetStatePath, "] is not a playerState!");
+    }
 }
