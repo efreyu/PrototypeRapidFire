@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://tnhy75ovf22d"]
+[gd_scene load_steps=2 format=3 uid="uid://tnhy75ovf22d"]
+
+[ext_resource type="PackedScene" uid="uid://c886py3axh5ci" path="res://scenes/characters/mannequiny.tscn" id="1_834y2"]
 
 [node name="Node3D" type="Node3D"]
 
@@ -10,3 +12,13 @@ stateMachine = NodePath("..")
 
 [node name="run" type="playerState" parent="playerStateMachine/move" node_paths=PackedStringArray("stateMachine")]
 stateMachine = NodePath("../..")
+
+[node name="mannequiny" parent="." instance=ExtResource("1_834y2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 2.08165e-12, 2.08165e-12)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.493896, 0.869521, 0, -0.869521, 0.493896, -0.0463319, 4.06646, 0.665332)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2703, 2.87546)
+current = true

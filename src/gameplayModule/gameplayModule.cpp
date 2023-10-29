@@ -12,10 +12,9 @@ void rapidFire::gameplayModule::initModule(godot::ModuleInitializationLevel p_le
         return;
     }
 
-    //    godot::ClassDB::register_class<ExampleVirtual>( true );
-    //    godot::ClassDB::register_abstract_class<ExampleAbstract>();
     godot::ClassDB::register_class<playerStateMachine>();
     godot::ClassDB::register_class<playerState>();
+    godot::ClassDB::register_class<playerCharacterBody>();
 }
 
 void rapidFire::gameplayModule::cleanupModule(godot::ModuleInitializationLevel p_level) {

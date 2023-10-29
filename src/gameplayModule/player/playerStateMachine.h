@@ -14,7 +14,6 @@ namespace rapidFire::gameplayModule {
 
     class playerStateMachine : public godot::Node {
         GDCLASS(playerStateMachine, godot::Node)
-    private:
         static void _bind_methods();
 
     public:
