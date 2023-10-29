@@ -15,6 +15,7 @@ void rapidFire::gameplayModule::initModule(godot::ModuleInitializationLevel p_le
     godot::ClassDB::register_class<playerStateMachine>();
     godot::ClassDB::register_class<playerState>();
     godot::ClassDB::register_class<playerCharacterBody>();
+    godot::ClassDB::register_class<playerMannequin>();
 }
 
 void rapidFire::gameplayModule::cleanupModule(godot::ModuleInitializationLevel p_level) {

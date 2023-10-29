@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://c2jvfu6u5j1vi"]
+
+[ext_resource type="PackedScene" uid="uid://c886py3axh5ci" path="res://scenes/characters/mannequiny.tscn" id="1_7qmmn"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_tgche"]
+radius = 0.2856
+height = 1.86286
+
+[node name="playerCharacterBody" type="playerCharacterBody" node_paths=PackedStringArray("playerModel", "stateMachine")]
+playerModel = NodePath("mannequiny")
+stateMachine = NodePath("playerStateMachine")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.941197, 0)
+shape = SubResource("CapsuleShape3D_tgche")
+
+[node name="mannequiny" parent="." instance=ExtResource("1_7qmmn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.212215)
+
+[node name="playerStateMachine" type="playerStateMachine" parent="." node_paths=PackedStringArray("initialState")]
+initialState = NodePath("move")
+
+[node name="move" type="playerState" parent="playerStateMachine" node_paths=PackedStringArray("stateMachine")]
+stateMachine = NodePath("..")
