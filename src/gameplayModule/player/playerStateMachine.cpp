@@ -11,6 +11,7 @@ void playerStateMachine::_bind_methods() {
     godot::ClassDB::bind_method(godot::D_METHOD("get_state"), &playerStateMachine::get_current_state);
     ADD_PROPERTY(
       godot::PropertyInfo(godot::Variant::OBJECT, "initialState", godot::PROPERTY_HINT_NODE_TYPE, "playerState"), "set_state", "get_state");
+    ADD_SIGNAL(godot::MethodInfo("onTransitionEnded", godot::PropertyInfo(godot::Variant::NODE_PATH, "targetStatePath")));
 }
 
 void playerStateMachine::_ready() {
