@@ -2,14 +2,12 @@
 #ifndef RAPIDFIRE_INPUTSTORAGE_H
 #define RAPIDFIRE_INPUTSTORAGE_H
 
-#include "godot_cpp/classes/node.hpp"
-#include "godot_cpp/classes/ref.hpp"
-#include "godot_cpp/classes/input_event.hpp"
+#include "godot_cpp/classes/object.hpp"
 #include <string>
 
 namespace rapidFire::utilsModule {
-    class inputStorage : public godot::Node {
-        GDCLASS(inputStorage, godot::Node)
+    class inputStorage : public godot::Object {
+        GDCLASS(inputStorage, godot::Object)
         static void _bind_methods();
 
     public:
@@ -20,8 +18,6 @@ namespace rapidFire::utilsModule {
         static godot::StringName getSingletonName();
 
         // override section
-        void _ready() override;
-        void _unhandled_input(const godot::Ref<godot::InputEvent>& event) override;
 
     private:
         static void onDeadReference();

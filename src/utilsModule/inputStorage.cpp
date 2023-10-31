@@ -40,11 +40,3 @@ void inputStorage::cleanup() {
 godot::StringName inputStorage::getSingletonName() {
     return {_singletonName.c_str()};
 }
-
-void inputStorage::_ready() {
-    getSingletonName();
-}
-
-void inputStorage::_unhandled_input(const godot::Ref<godot::InputEvent>& event) {
-    getSingletonName();
-}
