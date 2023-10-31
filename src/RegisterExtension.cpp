@@ -6,9 +6,8 @@
 #include "godot_cpp/core/defs.hpp"
 #include "godot_cpp/godot.hpp"
 
-#include "GDExtensionTemplate.h"
-#include "example/Example.h"
 #include "gameplayModule/gameplayModule.h"
+#include "utilsModule/utilsModule.h"
 
 /// @file
 /// Register our classes with Godot.
@@ -21,26 +20,19 @@ namespace {
     /// @see GDExtensionInit
     void initializeExtension(godot::ModuleInitializationLevel p_level) {
         rapidFire::gameplayModule::initModule(p_level);
+        rapidFire::utilsModule::initModule(p_level);
 
         if (p_level != godot::MODULE_INITIALIZATION_LEVEL_SCENE) {
             return;
         }
-
-        // TODO remove this
-        godot::ClassDB::register_class<ExampleRef>();
-        godot::ClassDB::register_class<ExampleMin>();
-        godot::ClassDB::register_class<Example>();
-        godot::ClassDB::register_class<ExampleVirtual>(true);
-        godot::ClassDB::register_abstract_class<ExampleAbstract>();
-
-        godot::ClassDB::register_class<GDExtensionTemplate>();
     }
 
     /// @brief Called by Godot to let us do any cleanup.
     ///
     /// @see GDExtensionInit
     void uninitializeExtension(godot::ModuleInitializationLevel p_level) {
-        rapidFire::gameplayModule::initModule(p_level);
+        rapidFire::gameplayModule::cleanupModule(p_level);
+        rapidFire::utilsModule::cleanupModule(p_level);
     }
 }// namespace
 
