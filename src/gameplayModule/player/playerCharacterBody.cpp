@@ -28,3 +28,7 @@ void playerCharacterBody::setStateMachine(playerStateMachine* stateMachine) {
 playerStateMachine* playerCharacterBody::getStateMachine() const {
     return _stateMachine;
 }
+
+void playerCharacterBody::_physics_process(double delta) {
+    //
+}

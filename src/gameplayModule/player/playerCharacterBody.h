@@ -22,7 +22,11 @@ namespace rapidFire::gameplayModule {
         static void _bind_methods();
 
     public:
+        // override section
+        void _physics_process(double delta) override;
 
+        // getters and setters for properties
+    private:
         _FORCE_INLINE_ void setPlayerModel(playerMannequin* playerModel);
         _FORCE_INLINE_ playerMannequin* getPlayerModel() const;
 

@@ -21,6 +21,7 @@ void playerStateMachine::_ready() {
 }
 
 void playerStateMachine::_unhandled_input(const godot::Ref<godot::InputEvent>& event) {
+    godot::UtilityFunctions::print(event->as_text());
     if (_currentState) {
         _currentState->unhandled_input_state(event);
     } else {
