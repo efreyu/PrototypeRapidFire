@@ -11,7 +11,6 @@ windows.debug.x86_64 = "lib/Windows-AMD64/RapidFire-d.dll"
 
 [icons]
 
-Example = "res://editor/icons/square-full-regular.svg"
 playerStateMachine = "res://editor/icons/code-fork-solid.svg"
 playerState = "res://editor/icons/code-commit-solid.svg"
 playerMannequin = "res://editor/icons/child-solid.svg"
